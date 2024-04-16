@@ -1,4 +1,4 @@
-# About this repository
+## About this repository
 This repository has been made to complement the work **"Implementation of an Enhanced Deep Super-Resolution (EDSR) Algorithm on histopathological images for image generation applications"** (2024), following the code present in the repository [EDSR-Pytorch](https://github.com/sanghyun-son/EDSR-PyTorch) and the work cited below:
 
 
