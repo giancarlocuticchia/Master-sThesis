@@ -30,7 +30,6 @@ class Model(nn.Module):
 
         self.n_GPUs = args.n_GPUs
         self.save_models = args.save_models
-        self.save_models_each = args.save_models_each
 
         module = import_module('model.' + args.model.lower())
         self.model = module.make_model(args).to(self.device)
@@ -72,10 +71,9 @@ class Model(nn.Module):
         if is_best:
             save_dirs.append(os.path.join(apath, 'model_best.pt'))
         if self.save_models:
-            if (int(epoch) % int(self.save_models_each) == 0):
-                save_dirs.append(
-                    os.path.join(apath, "model_{}.pt".format(epoch))
-                )
+            save_dirs.append(
+                os.path.join(apath, 'model_{}.pt'.format(epoch))
+            )
 
         for s in save_dirs:
             torch.save(self.model.state_dict(), s)

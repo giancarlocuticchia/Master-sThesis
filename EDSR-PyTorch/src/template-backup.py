@@ -51,19 +51,3 @@ def set_template(args):
         args.patch_size = 41
         args.lr = 1e-1
 
-    if args.template.find('EDSR_custom') >= 0:
-        args.dir_data =  "../image-data"
-        args.data_train = "Custom"
-        args.data_test = "Custom"
-        args.data_range = "1-2400/2401-2500"
-        args.ext = "sep"
-        args.scale = "4"
-        args.model = "EDSR"
-        args.pre_train = "../pre-train/edsr_x4-4f62e9ef.pt"
-        args.n_resblocks = 32
-        args.n_feats = 256
-        args.res_scale = 0.1
-        args.test_every = 100
-        args.epochs = 11
-        args.batch_size = 16
-        args.save = "edsr_x4-train"

@@ -142,25 +142,6 @@ parser.add_argument('--save_results', action='store_true',
                     help='save output results')
 parser.add_argument('--save_gt', action='store_true',
                     help='save low-resolution and high-resolution images together')
-parser.add_argument('--save_models_each', type=str, default='1',
-                    help='save models each this number of epochs')
-
-
-# Transfer Learning specifications
-parser.add_argument('--param_to_freeze', type=str, default='',
-                    help='named parameters in the model to freeze during training')
-parser.add_argument('--body_to_freeze', type=str, default='',
-                    help='range of layers to freeze in the body of the model during training')
-parser.add_argument('--tail_to_freeze', type=str, default='',
-                    help='range of layers to freeze in the tail of the model during training')
-parser.add_argument('--print_frozen_param', action='store_true',
-                    help='print the number of parameters from the model frozen during training')
-parser.add_argument('--torchinfo_summary', action='store_true',
-                    help='print the model summary using torchinfo')
-parser.add_argument('--torchinfo_inputsize', type=str, default='510,339',
-                    help='input size of a test image to use for printing torchinfo summary')
-
-parser.add_argument("-f", "--file", required=False)
 
 args = parser.parse_args()
 template.set_template(args)
