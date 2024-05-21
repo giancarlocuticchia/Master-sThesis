@@ -28,8 +28,8 @@ More information regarding each folder can be found in them.
 ## Our datasets
 To train the model we used two different dataset:
 
-* General Dataset (TCIA): 2500 patches (in PNG format) of pathological images from [The Cancer Imaging Archive](https://www.cancerimagingarchive.net/) (TCIA). These dataset is [available in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/general-dataset-tcia) (22.66 GB).
-* Dedicated Dataset (Humanitas): 32261 patches (in PNG format) of pathological images by the Humanitas Research Institute (Milan, Italy).
+* <u>General Dataset (TCIA)</u>: 2500 patches (in PNG format) of pathological images from [The Cancer Imaging Archive](https://www.cancerimagingarchive.net/) (TCIA). These dataset is [available in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/general-dataset-tcia) (22.66 GB).
+* <u>Dedicated Dataset (Humanitas)</u>: 32261 patches (in PNG format) of pathological images by the Humanitas Research Institute (Milan, Italy).
 
 More information about how these datasets were prepared can be seen in our [dedicated Jupyter Notebook](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/Notebooks-scripts/Notebooks/1_Preparing_the_datasets.ipynb).
 
@@ -37,10 +37,10 @@ More information about how these datasets were prepared can be seen in our [dedi
 ## Trained models
 We performed training on the EDSR x4 model by taking as starting point the pre-trained EDSR x4 model by its authors. We first trained it in our General Dataset (TCIA) and then with trained further in our Dedicated Dataset (Humanitas) in two ways: one providing the whole dataset in a single run, and one providing the dataset in batches (sequentially). The final trained models for each case are:
 
-* edsr_x4-4f62e9ef.pt: Pre-trained EDSR x4 by its authors. It can be obtained from their [original source](https://cv.snu.ac.kr/research/EDSR/models/edsr_x4-4f62e9ef.pt) and from [our source in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/pretrained-edsr-x4-models?select=edsr_x4-4f62e9ef.pt) (172.38 MB)
-* edsr_x4-best_trained_general.pt: EDSR x4 trained in General Dataset (TCIA). Available from [our source in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/pretrained-edsr-x4-models?select=edsr_x4-best_trained_general.pt) (172.41 MB)
-* edsr_x4-best_trained_dedicated_whole.pt: EDSR x4 trained in Dedicated Dataset (Humanitas), with the whole dataset in a single run. Available from [our source in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/pretrained-edsr-x4-models?select=edsr_x4-best_trained_dedicated_whole.pt) (172.41 MB)
-* edsr_x4-best_trained_dedicated_inbatches.pt: EDSR x4 trained in Dedicated Dataset (Humanitas), with the dataset in batches. Available from [our source in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/pretrained-edsr-x4-models?select=edsr_x4-best_trained_dedicated_inbatches.pt) (172.41 MB)
+* <u>edsr_x4-4f62e9ef.pt</u>: Pre-trained EDSR x4 by its authors. It can be obtained from their [original source](https://cv.snu.ac.kr/research/EDSR/models/edsr_x4-4f62e9ef.pt) and from [our source in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/pretrained-edsr-x4-models?select=edsr_x4-4f62e9ef.pt) (172.38 MB)
+* <u>edsr_x4-best_trained_general.pt</u>: EDSR x4 trained in General Dataset (TCIA). Available from [our source in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/pretrained-edsr-x4-models?select=edsr_x4-best_trained_general.pt) (172.41 MB)
+* <u>edsr_x4-best_trained_dedicated_whole.pt</u>: EDSR x4 trained in Dedicated Dataset (Humanitas), with the whole dataset in a single run. Available from [our source in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/pretrained-edsr-x4-models?select=edsr_x4-best_trained_dedicated_whole.pt) (172.41 MB)
+* <u>edsr_x4-best_trained_dedicated_inbatches.pt</u>: EDSR x4 trained in Dedicated Dataset (Humanitas), with the dataset in batches. Available from [our source in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/pretrained-edsr-x4-models?select=edsr_x4-best_trained_dedicated_inbatches.pt) (172.41 MB)
 
 
 
