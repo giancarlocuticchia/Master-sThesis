@@ -1,0 +1,1207 @@
+========================================================================================================================
+Layer (type (var_name))                  Input Shape          Output Shape         Param #              Trainable
+========================================================================================================================
+Model (Model)                            [16, 3, 500, 500]    [1, 3, 2000, 2000]   --                   Partial
+├─EDSR (model)                           [1, 3, 260, 260]     [1, 3, 1040, 1040]   --                   Partial
+│    └─MeanShift (sub_mean)              [1, 3, 260, 260]     [1, 3, 260, 260]     (12)                 False
+│    └─Sequential (head)                 [1, 3, 260, 260]     [1, 256, 260, 260]   --                   True
+│    │    └─Conv2d (0)                   [1, 3, 260, 260]     [1, 256, 260, 260]   7,168                True
+│    └─Sequential (body)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    └─ResBlock (0)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (0)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (1)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (1)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (2)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (2)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (3)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (3)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (4)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (4)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (5)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (5)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (6)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (6)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (7)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (7)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (8)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (8)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (9)                 [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (9)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (10)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (10)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (11)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (11)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (12)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (12)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (13)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (13)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (14)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (14)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (15)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (15)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (16)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (16)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (17)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (17)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (18)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (18)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (19)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (19)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (20)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (20)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (21)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (21)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (22)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (22)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (23)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (23)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (24)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (24)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (25)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (25)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (26)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (26)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (27)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (27)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (28)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (28)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (29)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (29)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (30)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (30)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─ResBlock (31)                [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   --                   True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    │    └─Conv2d (32)                  [1, 256, 260, 260]   [1, 256, 260, 260]   590,080              True
+│    └─Sequential (tail)                 [1, 256, 260, 260]   [1, 3, 1040, 1040]   --                   True
+│    │    └─Upsampler (0)                [1, 256, 260, 260]   [1, 256, 1040, 1040] --                   True
+│    │    │    └─Conv2d (0)              [1, 256, 260, 260]   [1, 1024, 260, 260]  2,360,320            True
+│    │    │    └─PixelShuffle (1)        [1, 1024, 260, 260]  [1, 256, 520, 520]   --                   --
+│    │    │    └─Conv2d (2)              [1, 256, 520, 520]   [1, 1024, 520, 520]  2,360,320            True
+│    │    │    └─PixelShuffle (3)        [1, 1024, 520, 520]  [1, 256, 1040, 1040] --                   --
+│    │    └─Conv2d (1)                   [1, 256, 1040, 1040] [1, 3, 1040, 1040]   6,915                True
+│    └─MeanShift (add_mean)              [1, 3, 1040, 1040]   [1, 3, 1040, 1040]   (12)                 False
+├─EDSR (model)                           [1, 3, 260, 260]     [1, 3, 1040, 1040]   (recursive)          Partial
+│    └─MeanShift (sub_mean)              [1, 3, 260, 260]     [1, 3, 260, 260]     (recursive)          False
+│    └─Sequential (head)                 [1, 3, 260, 260]     [1, 256, 260, 260]   (recursive)          True
+│    │    └─Conv2d (0)                   [1, 3, 260, 260]     [1, 256, 260, 260]   (recursive)          True
+│    └─Sequential (body)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (0)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (0)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (1)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (1)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (2)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (2)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (3)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (3)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (4)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (4)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (5)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (5)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (6)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (6)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (7)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (7)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (8)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (8)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (9)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (9)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (10)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (10)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (11)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (11)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (12)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (12)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (13)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (13)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (14)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (14)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (15)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (15)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (16)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (16)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (17)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (17)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (18)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (18)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (19)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (19)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (20)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (20)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (21)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (21)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (22)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (22)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (23)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (23)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (24)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (24)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (25)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (25)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (26)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (26)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (27)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (27)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (28)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (28)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (29)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (29)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (30)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (30)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─Conv2d (32)                  [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    └─Sequential (tail)                 [1, 256, 260, 260]   [1, 3, 1040, 1040]   (recursive)          True
+│    │    └─Upsampler (0)                [1, 256, 260, 260]   [1, 256, 1040, 1040] (recursive)          True
+│    │    │    └─Conv2d (0)              [1, 256, 260, 260]   [1, 1024, 260, 260]  (recursive)          True
+│    │    │    └─PixelShuffle (1)        [1, 1024, 260, 260]  [1, 256, 520, 520]   --                   --
+│    │    │    └─Conv2d (2)              [1, 256, 520, 520]   [1, 1024, 520, 520]  (recursive)          True
+│    │    │    └─PixelShuffle (3)        [1, 1024, 520, 520]  [1, 256, 1040, 1040] --                   --
+│    │    └─Conv2d (1)                   [1, 256, 1040, 1040] [1, 3, 1040, 1040]   (recursive)          True
+│    └─MeanShift (add_mean)              [1, 3, 1040, 1040]   [1, 3, 1040, 1040]   (recursive)          False
+├─EDSR (model)                           [1, 3, 260, 260]     [1, 3, 1040, 1040]   (recursive)          Partial
+│    └─MeanShift (sub_mean)              [1, 3, 260, 260]     [1, 3, 260, 260]     (recursive)          False
+│    └─Sequential (head)                 [1, 3, 260, 260]     [1, 256, 260, 260]   (recursive)          True
+│    │    └─Conv2d (0)                   [1, 3, 260, 260]     [1, 256, 260, 260]   (recursive)          True
+│    └─Sequential (body)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (0)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (0)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (1)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (1)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (2)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (2)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (3)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (3)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (4)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (4)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (5)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (5)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (6)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (6)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (7)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (7)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (8)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (8)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (9)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (9)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (10)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (10)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (11)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (11)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (12)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (12)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (13)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (13)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (14)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (14)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (15)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (15)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (16)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (16)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (17)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (17)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (18)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (18)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (19)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (19)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (20)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (20)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (21)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (21)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (22)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (22)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (23)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (23)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (24)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (24)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (25)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (25)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (26)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (26)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (27)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (27)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (28)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (28)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (29)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (29)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (30)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (30)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─Conv2d (32)                  [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    └─Sequential (tail)                 [1, 256, 260, 260]   [1, 3, 1040, 1040]   (recursive)          True
+│    │    └─Upsampler (0)                [1, 256, 260, 260]   [1, 256, 1040, 1040] (recursive)          True
+│    │    │    └─Conv2d (0)              [1, 256, 260, 260]   [1, 1024, 260, 260]  (recursive)          True
+│    │    │    └─PixelShuffle (1)        [1, 1024, 260, 260]  [1, 256, 520, 520]   --                   --
+│    │    │    └─Conv2d (2)              [1, 256, 520, 520]   [1, 1024, 520, 520]  (recursive)          True
+│    │    │    └─PixelShuffle (3)        [1, 1024, 520, 520]  [1, 256, 1040, 1040] --                   --
+│    │    └─Conv2d (1)                   [1, 256, 1040, 1040] [1, 3, 1040, 1040]   (recursive)          True
+│    └─MeanShift (add_mean)              [1, 3, 1040, 1040]   [1, 3, 1040, 1040]   (recursive)          False
+├─EDSR (model)                           [1, 3, 260, 260]     [1, 3, 1040, 1040]   (recursive)          Partial
+│    └─MeanShift (sub_mean)              [1, 3, 260, 260]     [1, 3, 260, 260]     (recursive)          False
+│    └─Sequential (head)                 [1, 3, 260, 260]     [1, 256, 260, 260]   (recursive)          True
+│    │    └─Conv2d (0)                   [1, 3, 260, 260]     [1, 256, 260, 260]   (recursive)          True
+│    └─Sequential (body)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (0)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (0)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (1)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (1)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (2)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (2)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (3)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (3)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (4)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (4)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (5)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (5)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (6)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (6)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (7)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (7)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (8)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (8)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (9)                 [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (9)                 --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (10)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (10)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (11)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (11)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (12)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (12)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (13)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (13)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (14)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (14)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (15)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (15)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (16)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (16)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (17)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (17)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (18)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (18)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (19)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (19)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (20)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (20)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (21)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (21)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (22)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (22)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (23)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (23)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (24)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (24)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (25)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (25)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (26)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (26)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (27)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (27)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (28)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (28)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (29)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (29)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (30)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    └─ResBlock (30)                --                   --                   (recursive)          True
+│    │    │    └─Sequential (body)       --                   --                   (recursive)          True
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─ResBlock (31)                [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    └─Sequential (body)       [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─Conv2d (0)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    │    │    └─ReLU (1)           [1, 256, 260, 260]   [1, 256, 260, 260]   --                   --
+│    │    │    │    └─Conv2d (2)         [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    │    └─Conv2d (32)                  [1, 256, 260, 260]   [1, 256, 260, 260]   (recursive)          True
+│    └─Sequential (tail)                 [1, 256, 260, 260]   [1, 3, 1040, 1040]   (recursive)          True
+│    │    └─Upsampler (0)                [1, 256, 260, 260]   [1, 256, 1040, 1040] (recursive)          True
+│    │    │    └─Conv2d (0)              [1, 256, 260, 260]   [1, 1024, 260, 260]  (recursive)          True
+│    │    │    └─PixelShuffle (1)        [1, 1024, 260, 260]  [1, 256, 520, 520]   --                   --
+│    │    │    └─Conv2d (2)              [1, 256, 520, 520]   [1, 1024, 520, 520]  (recursive)          True
+│    │    │    └─PixelShuffle (3)        [1, 1024, 520, 520]  [1, 256, 1040, 1040] --                   --
+│    │    └─Conv2d (1)                   [1, 256, 1040, 1040] [1, 3, 1040, 1040]   (recursive)          True
+│    └─MeanShift (add_mean)              [1, 3, 1040, 1040]   [1, 3, 1040, 1040]   (recursive)          False
+========================================================================================================================
+Total params: 61,382,427
+Trainable params: 61,382,403
+Non-trainable params: 24
+Total mult-adds (T): 13.59
+========================================================================================================================
+Input size (MB): 48.00
+Forward/backward pass size (MB): 47839.17
+Params size (MB): 172.36
+Estimated Total Size (MB): 48059.53
+========================================================================================================================
