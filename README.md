@@ -13,7 +13,7 @@ We focused on the single 4-times scale of the EDSR model on pathological images.
 
 In our work, we also:
 
-* made some modifications to the original code, by adding two new files ([freeze.py](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/EDSR-PyTorch/src/freeze.py) and [main_use.py](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/EDSR-PyTorch/src/main_use.py)), and a new argument (save_models_each);
+* made some modifications to the original code, by adding two new files ([freeze.py](EDSR-PyTorch/src/freeze.py) and [main_use.py](EDSR-PyTorch/src/main_use.py)), and a new argument (save_models_each);
 * produced a sort of Documentation of our understanding of the PyTorch Implementation of the EDSR x4 model, also including pertinent explanations of our contributions.
 
 These contributions were meant to facilitate our work, and are in no means improvements or replacements of any kind to the original work made by the authors of the model. 
@@ -22,10 +22,12 @@ These contributions were meant to facilitate our work, and are in no means impro
 ## The content of this repository
 In this repository we have the following folders and files:
 
-* [EDSR-PyTorch](https://github.com/giancarlocuticchia/Master-sThesis/tree/main/EDSR-PyTorch): Folder with our cloned version of the original [EDSR-Pytorch](https://github.com/sanghyun-son/EDSR-PyTorch) repository, with our modified and added files.
-* [Notebooks-scripts](https://github.com/giancarlocuticchia/Master-sThesis/tree/main/Notebooks-scripts): Folder containing Jupyter Notebooks and Python scripts we produced in the realization of our work.
-* [Output-files](https://github.com/giancarlocuticchia/Master-sThesis/tree/main/Output-files): Folder containing additional files that could serve as examples.
-* [Documentation_EDSRPyTorch.pdf](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/Documentation_EDSRPyTorch.pdf): PDF file containing the Documentation we produced (corresponding to one of the Appendices of our work).
+* [EDSR-PyTorch](EDSR-PyTorch): Folder with our cloned version of the original [EDSR-Pytorch](https://github.com/sanghyun-son/EDSR-PyTorch) repository, with our modified and added files.
+* [Example-files](Example-files): Folder with two subfolders, [Logs](Example-files/Logs) and [Measures](Example-files/Measures), containing examples of log files (in .txt format) produced while training the EDSR x4 model, and examples of measures files (in .csv) produced by our Python scripts, respectively.
+* [Figures](Figures): Folder containing images used in the README.md files in this repository.
+* [Notebooks-scripts](Notebooks-scripts): Folder containing Jupyter Notebooks and Python scripts we produced in the realization of our work.
+* [Output-files](Output-files): Folder containing additional files that could serve as examples.
+* [Documentation_EDSRPyTorch.pdf](Documentation_EDSRPyTorch.pdf): PDF file containing the Documentation we produced (corresponding to one of the Appendices of our work).
 
 More information regarding each folder can be found in them.
 
@@ -36,7 +38,7 @@ To train the model we used two different dataset:
 * <u>General Dataset (TCIA)</u>: 2500 patches (in PNG format) of pathological images from [The Cancer Imaging Archive](https://www.cancerimagingarchive.net/) (TCIA). These dataset is [available in Kaggle](https://www.kaggle.com/datasets/giancarlocuticchia/general-dataset-tcia) (22.66 GB).
 * <u>Dedicated Dataset (Humanitas)</u>: 32261 patches (in PNG format) of pathological images by the Humanitas Research Institute (Milan, Italy).
 
-More information about how these datasets were prepared can be seen in our [dedicated Jupyter Notebook](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/Notebooks-scripts/Notebooks/1_Preparing_the_datasets.ipynb).
+More information about how these datasets were prepared can be seen in our [dedicated Jupyter Notebook](Notebooks-scripts/Notebooks/1_Preparing_the_datasets.ipynb).
 
 
 ## Trained models
