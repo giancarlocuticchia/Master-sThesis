@@ -10,6 +10,7 @@ import os
 import pandas as pd
 import random
 import shutil
+import subprocess
 
 import stardist
 from stardist.models import StarDist2D
@@ -39,7 +40,8 @@ def apply_EDSR_to_folder(folder="./EDSR-PyTorch/test",
   ## Use the model
   if verbose :
     print(f"[INFO] Using EDSR_x{scale} model as {data_test} with weights from {pretrain_path} on images inside {folder}.\n")
-  !python main_use.py --data_test {data_test} --dir_demo {folder} --scale {scale} --save test --n_resblocks 32 --n_feats 256 --res_scale 0.1 --pre_train {pretrain_path} --test_only --save_results
+  command = f"python main_use.py --data_test {data_test} --dir_demo {folder} --scale {scale} --save test --n_resblocks 32 --n_feats 256 --res_scale 0.1 --pre_train {pretrain_path} --test_only --save_results"
+  subprocess.run(command, shell=True)
 
   # Change the current working directory back to the previous one
   os.chdir(starting_dir)
@@ -252,8 +254,19 @@ def make_composition_of_low_res_with_segmentation(list_of_images_paths, edsr_pre
     # Loading LR image
     LR_image = Image.open(image_filepath)        #Alternatively:   LR = mpimg.imread(image_filepath)    where:  import matplotlib.image as mpimg
 
+    # Get dimensions of LR image
+    LR_image_width, LR_image_height = LR_image.size
+    # Create a white background image of double the size
+    background_width = 2 * LR_image_width
+    background_height = 2 * LR_image_height
+    background = Image.new('RGB', (background_width, background_height), (255, 255, 255))
+    # Calculate position to paste LR image on background to center it
+    paste_position = ((background_width - LR_image_width) // 2, (background_height - LR_image_height) // 2)
+    # Paste LR image onto the background
+    background.paste(LR_image, paste_position)
+
     # Plot the original LR image for the current row
-    axs[row, 0].imshow(LR_image, aspect='equal')
+    axs[row, 0].imshow(background, aspect='equal')
     axs[row, 0].axis('off')
     axs[row, 0].set_title(f"Original\n{image_name}\n", fontsize=fontsize)
 
@@ -350,7 +363,7 @@ current_image_folder = os.path.join(dir_images, "current_image_display-segLR")  
 # Provide images folders
 file_extension=".png"
 #image_folder = path_to_the_folder_with_our_LR_images
-mage_folder = dir_images    # Example
+image_folder = dir_images    # Example
 
 # Model parameters
 scale = 4

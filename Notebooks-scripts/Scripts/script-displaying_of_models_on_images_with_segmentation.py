@@ -10,6 +10,7 @@ import os
 import pandas as pd
 import random
 import shutil
+import subprocess
 
 import stardist
 from stardist.models import StarDist2D
@@ -39,7 +40,8 @@ def apply_EDSR_to_folder(folder="./EDSR-PyTorch/test",
   ## Use the model
   if verbose :
     print(f"[INFO] Using EDSR_x{scale} model as {data_test} with weights from {pretrain_path} on images inside {folder}.\n")
-  !python main_use.py --data_test {data_test} --dir_demo {folder} --scale {scale} --save test --n_resblocks 32 --n_feats 256 --res_scale 0.1 --pre_train {pretrain_path} --test_only --save_results
+  command = f"python main_use.py --data_test {data_test} --dir_demo {folder} --scale {scale} --save test --n_resblocks 32 --n_feats 256 --res_scale 0.1 --pre_train {pretrain_path} --test_only --save_results"
+  subprocess.run(command, shell=True)
 
   # Change the current working directory back to the previous one
   os.chdir(starting_dir)
