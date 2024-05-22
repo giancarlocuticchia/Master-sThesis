@@ -1,0 +1,643 @@
+EDSR(
+  (sub_mean): MeanShift(3, 3, kernel_size=(1, 1), stride=(1, 1))
+  (add_mean): MeanShift(3, 3, kernel_size=(1, 1), stride=(1, 1))
+  (head): Sequential(
+    (0): Conv2d(3, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (body): Sequential(
+    (0): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (1): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (2): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (3): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (4): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (5): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (6): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (7): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (8): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (9): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (10): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (11): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (12): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (13): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (14): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (15): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (16): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (17): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (18): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (19): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (20): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (21): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (22): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (23): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (24): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (25): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (26): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (27): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (28): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (29): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (30): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (31): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (32): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (tail): Sequential(
+    (0): Upsampler(
+      (0): Conv2d(256, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): PixelShuffle(upscale_factor=2)
+      (2): Conv2d(256, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PixelShuffle(upscale_factor=2)
+    )
+    (1): Conv2d(256, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+[Epoch 1]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.6535]	182.9+286.6s
+
+Evaluation:
+[Custom x4]	PSNR: 25.326 (Best: 25.326 @epoch 1)
+Forward: 142.59s
+
+Saving...
+Total: 143.68s
+
+[Epoch 2]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.7430]	182.2+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.332 (Best: 25.332 @epoch 2)
+Forward: 142.63s
+
+Saving...
+Total: 143.81s
+
+[Epoch 3]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.7058]	182.1+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.333 (Best: 25.333 @epoch 3)
+Forward: 142.61s
+
+Saving...
+Total: 143.82s
+
+[Epoch 4]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5892]	182.1+287.0s
+
+Evaluation:
+[Custom x4]	PSNR: 25.343 (Best: 25.343 @epoch 4)
+Forward: 142.54s
+
+Saving...
+Total: 143.83s
+
+[Epoch 5]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5153]	182.5+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.338 (Best: 25.343 @epoch 4)
+Forward: 142.57s
+
+Saving...
+Total: 143.74s
+
+[Epoch 6]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5878]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.338 (Best: 25.343 @epoch 4)
+Forward: 142.59s
+
+Saving...
+Total: 143.64s
+
+[Epoch 7]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.6532]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.347 (Best: 25.347 @epoch 7)
+Forward: 142.59s
+
+Saving...
+Total: 143.77s
+
+[Epoch 8]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.6050]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.331 (Best: 25.347 @epoch 7)
+Forward: 142.61s
+
+Saving...
+Total: 143.65s
+
+[Epoch 9]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5540]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.353 (Best: 25.353 @epoch 9)
+Forward: 142.59s
+
+Saving...
+Total: 143.78s
+
+[Epoch 10]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5430]	182.6+287.5s
+
+Evaluation:
+[Custom x4]	PSNR: 25.336 (Best: 25.353 @epoch 9)
+Forward: 142.56s
+
+Saving...
+Total: 143.67s
+
+[Epoch 11]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.6022]	182.6+287.5s
+
+Evaluation:
+[Custom x4]	PSNR: 25.332 (Best: 25.353 @epoch 9)
+Forward: 142.57s
+
+Saving...
+Total: 143.50s
+
+[Epoch 12]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5304]	182.2+287.3s
+
+Evaluation:
+[Custom x4]	PSNR: 25.347 (Best: 25.353 @epoch 9)
+Forward: 142.66s
+
+Saving...
+Total: 143.59s
+
+[Epoch 13]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5735]	182.1+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.330 (Best: 25.353 @epoch 9)
+Forward: 142.59s
+
+Saving...
+Total: 143.53s
+
+[Epoch 14]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.7247]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.343 (Best: 25.353 @epoch 9)
+Forward: 142.59s
+
+Saving...
+Total: 143.54s
+
+[Epoch 15]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5072]	182.1+287.0s
+
+Evaluation:
+[Custom x4]	PSNR: 25.339 (Best: 25.353 @epoch 9)
+Forward: 142.58s
+
+Saving...
+Total: 143.77s
+
+[Epoch 16]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5507]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.344 (Best: 25.353 @epoch 9)
+Forward: 142.56s
+
+Saving...
+Total: 143.52s
+
+[Epoch 17]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.6669]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.335 (Best: 25.353 @epoch 9)
+Forward: 142.56s
+
+Saving...
+Total: 143.52s
+
+[Epoch 18]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5111]	182.1+287.0s
+
+Evaluation:
+[Custom x4]	PSNR: 25.343 (Best: 25.353 @epoch 9)
+Forward: 142.55s
+
+Saving...
+Total: 143.72s
+
+[Epoch 19]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5461]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.328 (Best: 25.353 @epoch 9)
+Forward: 142.59s
+
+Saving...
+Total: 143.67s
+
+[Epoch 20]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4866]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.338 (Best: 25.353 @epoch 9)
+Forward: 142.58s
+
+Saving...
+Total: 143.89s
+
+[Epoch 21]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5755]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.335 (Best: 25.353 @epoch 9)
+Forward: 142.56s
+
+Saving...
+Total: 143.66s
+
+[Epoch 22]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4976]	182.1+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.322 (Best: 25.353 @epoch 9)
+Forward: 142.49s
+
+Saving...
+Total: 143.57s
+
+[Epoch 23]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5344]	182.5+287.5s
+
+Evaluation:
+[Custom x4]	PSNR: 25.326 (Best: 25.353 @epoch 9)
+Forward: 142.56s
+
+Saving...
+Total: 143.56s
+
+[Epoch 24]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4435]	182.6+287.5s
+
+Evaluation:
+[Custom x4]	PSNR: 25.329 (Best: 25.353 @epoch 9)
+Forward: 142.63s
+
+Saving...
+Total: 143.58s
+
+[Epoch 25]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.6134]	182.1+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.336 (Best: 25.353 @epoch 9)
+Forward: 142.58s
+
+Saving...
+Total: 143.70s
+
+[Epoch 26]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4749]	182.1+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.333 (Best: 25.353 @epoch 9)
+Forward: 142.61s
+
+Saving...
+Total: 143.56s
+
+[Epoch 27]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.6073]	182.1+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.326 (Best: 25.353 @epoch 9)
+Forward: 142.61s
+
+Saving...
+Total: 143.55s
+
+[Epoch 28]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4988]	182.1+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.329 (Best: 25.353 @epoch 9)
+Forward: 142.58s
+
+Saving...
+Total: 143.64s
+
+[Epoch 29]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4953]	182.2+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.318 (Best: 25.353 @epoch 9)
+Forward: 142.54s
+
+Saving...
+Total: 143.51s
+
+[Epoch 30]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.3996]	182.0+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.316 (Best: 25.353 @epoch 9)
+Forward: 142.56s
+
+Saving...
+Total: 143.71s
+
+[Epoch 31]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4749]	182.0+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.331 (Best: 25.353 @epoch 9)
+Forward: 142.54s
+
+Saving...
+Total: 143.49s
+
+[Epoch 32]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4895]	182.0+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.320 (Best: 25.353 @epoch 9)
+Forward: 142.54s
+
+Saving...
+Total: 143.49s
+
+[Epoch 33]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4889]	182.0+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.307 (Best: 25.353 @epoch 9)
+Forward: 142.50s
+
+Saving...
+Total: 143.43s
+
+[Epoch 34]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4011]	182.0+287.1s
+
+Evaluation:
+[Custom x4]	PSNR: 25.322 (Best: 25.353 @epoch 9)
+Forward: 142.54s
+
+Saving...
+Total: 143.47s
+
+[Epoch 35]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.3775]	182.2+287.3s
+
+Evaluation:
+[Custom x4]	PSNR: 25.322 (Best: 25.353 @epoch 9)
+Forward: 142.48s
+
+Saving...
+Total: 143.60s
+
+[Epoch 36]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4582]	182.4+287.5s
+
+Evaluation:
+[Custom x4]	PSNR: 25.304 (Best: 25.353 @epoch 9)
+Forward: 142.46s
+
+Saving...
+Total: 143.50s
+
+[Epoch 37]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.4979]	182.3+287.4s
+
+Evaluation:
+[Custom x4]	PSNR: 25.306 (Best: 25.353 @epoch 9)
+Forward: 142.59s
+
+Saving...
+Total: 143.54s
+
+[Epoch 38]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5050]	182.1+287.3s
+
+Evaluation:
+[Custom x4]	PSNR: 25.303 (Best: 25.353 @epoch 9)
+Forward: 142.58s
+
+Saving...
+Total: 143.57s
+
+[Epoch 39]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.3723]	182.0+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.312 (Best: 25.353 @epoch 9)
+Forward: 142.55s
+
+Saving...
+Total: 143.51s
+
+[Epoch 40]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 8.5309]	182.1+287.2s
+
+Evaluation:
+[Custom x4]	PSNR: 25.306 (Best: 25.353 @epoch 9)
+Forward: 142.57s
+
+Saving...
+Total: 143.70s
+

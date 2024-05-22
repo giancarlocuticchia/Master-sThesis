@@ -1,0 +1,2243 @@
+EDSR(
+  (sub_mean): MeanShift(3, 3, kernel_size=(1, 1), stride=(1, 1))
+  (add_mean): MeanShift(3, 3, kernel_size=(1, 1), stride=(1, 1))
+  (head): Sequential(
+    (0): Conv2d(3, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (body): Sequential(
+    (0): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (1): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (2): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (3): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (4): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (5): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (6): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (7): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (8): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (9): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (10): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (11): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (12): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (13): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (14): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (15): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (16): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (17): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (18): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (19): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (20): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (21): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (22): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (23): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (24): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (25): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (26): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (27): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (28): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (29): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (30): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (31): ResBlock(
+      (body): Sequential(
+        (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU(inplace=True)
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (32): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (tail): Sequential(
+    (0): Upsampler(
+      (0): Conv2d(256, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): PixelShuffle(upscale_factor=2)
+      (2): Conv2d(256, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): PixelShuffle(upscale_factor=2)
+    )
+    (1): Conv2d(256, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+)
+[Epoch 1]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.4468]	179.6+281.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.478 (Best: 27.478 @epoch 1)
+Forward: 4102.30s
+
+Saving...
+Total: 4103.34s
+
+[Epoch 2]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.1910]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.553 (Best: 27.553 @epoch 2)
+Forward: 4102.82s
+
+Saving...
+Total: 4104.05s
+
+[Epoch 3]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.2187]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.581 (Best: 27.581 @epoch 3)
+Forward: 4102.57s
+
+Saving...
+Total: 4103.84s
+
+[Epoch 4]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.1068]	280.8+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.607 (Best: 27.607 @epoch 4)
+Forward: 4102.94s
+
+Saving...
+Total: 4104.22s
+
+[Epoch 5]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9809]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.611 (Best: 27.611 @epoch 5)
+Forward: 4102.47s
+
+Saving...
+Total: 4103.92s
+
+[Epoch 6]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0075]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.642 (Best: 27.642 @epoch 6)
+Forward: 4102.01s
+
+Saving...
+Total: 4103.35s
+
+[Epoch 7]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0776]	281.0+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.657 (Best: 27.657 @epoch 7)
+Forward: 4104.42s
+
+Saving...
+Total: 4105.64s
+
+[Epoch 8]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.1335]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.661 (Best: 27.661 @epoch 8)
+Forward: 4103.23s
+
+Saving...
+Total: 4104.46s
+
+[Epoch 9]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.1047]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.664 (Best: 27.664 @epoch 9)
+Forward: 4103.42s
+
+Saving...
+Total: 4104.65s
+
+[Epoch 10]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0592]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.672 (Best: 27.672 @epoch 10)
+Forward: 4104.06s
+
+Saving...
+Total: 4105.46s
+
+[Epoch 11]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9879]	280.8+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.670 (Best: 27.672 @epoch 10)
+Forward: 4103.80s
+
+Saving...
+Total: 4104.85s
+
+[Epoch 12]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.1185]	280.8+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.689 (Best: 27.689 @epoch 12)
+Forward: 4104.51s
+
+Saving...
+Total: 4105.77s
+
+[Epoch 13]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0620]	280.8+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.688 (Best: 27.689 @epoch 12)
+Forward: 4105.59s
+
+Saving...
+Total: 4106.56s
+
+[Epoch 14]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0912]	280.7+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.702 (Best: 27.702 @epoch 14)
+Forward: 4105.65s
+
+Saving...
+Total: 4106.89s
+
+[Epoch 15]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9779]	280.8+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.705 (Best: 27.705 @epoch 15)
+Forward: 4105.49s
+
+Saving...
+Total: 4107.14s
+
+[Epoch 16]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0376]	281.0+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.687 (Best: 27.705 @epoch 15)
+Forward: 4105.45s
+
+Saving...
+Total: 4106.46s
+
+[Epoch 17]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9742]	280.8+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.703 (Best: 27.705 @epoch 15)
+Forward: 4105.47s
+
+Saving...
+Total: 4106.46s
+
+[Epoch 18]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9304]	280.9+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.710 (Best: 27.710 @epoch 18)
+Forward: 4107.07s
+
+Saving...
+Total: 4108.29s
+
+[Epoch 19]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0447]	281.0+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.716 (Best: 27.716 @epoch 19)
+Forward: 4106.09s
+
+Saving...
+Total: 4107.31s
+
+[Epoch 20]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0314]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.693 (Best: 27.716 @epoch 19)
+Forward: 4104.48s
+
+Saving...
+Total: 4105.65s
+
+[Epoch 21]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9130]	280.7+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.728 (Best: 27.728 @epoch 21)
+Forward: 4104.81s
+
+Saving...
+Total: 4106.06s
+
+[Epoch 22]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0599]	280.9+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.728 (Best: 27.728 @epoch 22)
+Forward: 4105.28s
+
+Saving...
+Total: 4106.55s
+
+[Epoch 23]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0184]	280.8+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.689 (Best: 27.728 @epoch 22)
+Forward: 4105.11s
+
+Saving...
+Total: 4106.11s
+
+[Epoch 24]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0696]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.736 (Best: 27.736 @epoch 24)
+Forward: 4105.55s
+
+Saving...
+Total: 4106.95s
+
+[Epoch 25]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0691]	280.8+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.716 (Best: 27.736 @epoch 24)
+Forward: 4105.44s
+
+Saving...
+Total: 4106.58s
+
+[Epoch 26]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9661]	282.4+322.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.724 (Best: 27.736 @epoch 24)
+Forward: 4105.86s
+
+Saving...
+Total: 4106.84s
+
+[Epoch 27]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9529]	284.0+324.0s
+
+Evaluation:
+[Custom x4]	PSNR: 27.661 (Best: 27.736 @epoch 24)
+Forward: 4107.38s
+
+Saving...
+Total: 4108.38s
+
+[Epoch 28]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0177]	284.0+323.9s
+
+Evaluation:
+[Custom x4]	PSNR: 27.732 (Best: 27.736 @epoch 24)
+Forward: 4108.22s
+
+Saving...
+Total: 4109.21s
+
+[Epoch 29]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9150]	284.3+324.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.717 (Best: 27.736 @epoch 24)
+Forward: 4105.68s
+
+Saving...
+Total: 4106.66s
+
+[Epoch 30]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9775]	280.8+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.747 (Best: 27.747 @epoch 30)
+Forward: 4105.02s
+
+Saving...
+Total: 4106.45s
+
+[Epoch 31]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9434]	280.9+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.735 (Best: 27.747 @epoch 30)
+Forward: 4104.25s
+
+Saving...
+Total: 4105.24s
+
+[Epoch 32]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0278]	280.7+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.723 (Best: 27.747 @epoch 30)
+Forward: 4103.36s
+
+Saving...
+Total: 4104.41s
+
+[Epoch 33]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9489]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.737 (Best: 27.747 @epoch 30)
+Forward: 4103.32s
+
+Saving...
+Total: 4104.39s
+
+[Epoch 34]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8854]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.743 (Best: 27.747 @epoch 30)
+Forward: 4103.59s
+
+Saving...
+Total: 4104.63s
+
+[Epoch 35]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9419]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.757 (Best: 27.757 @epoch 35)
+Forward: 4103.23s
+
+Saving...
+Total: 4104.87s
+
+[Epoch 36]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0963]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.754 (Best: 27.757 @epoch 35)
+Forward: 4103.63s
+
+Saving...
+Total: 4104.63s
+
+[Epoch 37]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0869]	280.8+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.749 (Best: 27.757 @epoch 35)
+Forward: 4103.01s
+
+Saving...
+Total: 4104.01s
+
+[Epoch 38]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0143]	280.8+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.752 (Best: 27.757 @epoch 35)
+Forward: 4104.78s
+
+Saving...
+Total: 4105.77s
+
+[Epoch 39]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9561]	280.8+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.713 (Best: 27.757 @epoch 35)
+Forward: 4103.82s
+
+Saving...
+Total: 4104.83s
+
+[Epoch 40]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9770]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.738 (Best: 27.757 @epoch 35)
+Forward: 4103.03s
+
+Saving...
+Total: 4104.20s
+
+[Epoch 41]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8622]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.758 (Best: 27.758 @epoch 41)
+Forward: 4105.72s
+
+Saving...
+Total: 4106.94s
+
+[Epoch 42]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0259]	280.9+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.759 (Best: 27.759 @epoch 42)
+Forward: 4105.54s
+
+Saving...
+Total: 4106.72s
+
+[Epoch 43]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9407]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.773 (Best: 27.773 @epoch 43)
+Forward: 4103.88s
+
+Saving...
+Total: 4105.14s
+
+[Epoch 44]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9384]	280.7+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.751 (Best: 27.773 @epoch 43)
+Forward: 4102.88s
+
+Saving...
+Total: 4103.85s
+
+[Epoch 45]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9303]	281.0+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.761 (Best: 27.773 @epoch 43)
+Forward: 4102.74s
+
+Saving...
+Total: 4103.90s
+
+[Epoch 46]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8980]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.744 (Best: 27.773 @epoch 43)
+Forward: 4102.33s
+
+Saving...
+Total: 4103.31s
+
+[Epoch 47]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9070]	280.7+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.762 (Best: 27.773 @epoch 43)
+Forward: 4101.99s
+
+Saving...
+Total: 4102.97s
+
+[Epoch 48]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0118]	280.6+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.768 (Best: 27.773 @epoch 43)
+Forward: 4102.82s
+
+Saving...
+Total: 4103.79s
+
+[Epoch 49]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9894]	280.7+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.755 (Best: 27.773 @epoch 43)
+Forward: 4101.66s
+
+Saving...
+Total: 4102.64s
+
+[Epoch 50]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8414]	280.8+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.767 (Best: 27.773 @epoch 43)
+Forward: 4103.36s
+
+Saving...
+Total: 4104.53s
+
+[Epoch 51]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9991]	280.6+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.729 (Best: 27.773 @epoch 43)
+Forward: 4101.66s
+
+Saving...
+Total: 4102.65s
+
+[Epoch 52]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9240]	280.6+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.777 (Best: 27.777 @epoch 52)
+Forward: 4102.03s
+
+Saving...
+Total: 4103.25s
+
+[Epoch 53]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9443]	280.6+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.755 (Best: 27.777 @epoch 52)
+Forward: 4102.47s
+
+Saving...
+Total: 4103.45s
+
+[Epoch 54]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9254]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.776 (Best: 27.777 @epoch 52)
+Forward: 4101.81s
+
+Saving...
+Total: 4102.80s
+
+[Epoch 55]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9803]	280.6+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.767 (Best: 27.777 @epoch 52)
+Forward: 4101.87s
+
+Saving...
+Total: 4103.16s
+
+[Epoch 56]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8806]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.757 (Best: 27.777 @epoch 52)
+Forward: 4102.49s
+
+Saving...
+Total: 4103.48s
+
+[Epoch 57]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8306]	280.6+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.785 (Best: 27.785 @epoch 57)
+Forward: 4102.01s
+
+Saving...
+Total: 4103.24s
+
+[Epoch 58]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7853]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.776 (Best: 27.785 @epoch 57)
+Forward: 4102.27s
+
+Saving...
+Total: 4103.27s
+
+[Epoch 59]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8930]	280.9+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.769 (Best: 27.785 @epoch 57)
+Forward: 4102.89s
+
+Saving...
+Total: 4103.89s
+
+[Epoch 60]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9496]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.792 (Best: 27.792 @epoch 60)
+Forward: 4103.21s
+
+Saving...
+Total: 4104.62s
+
+[Epoch 61]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8406]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.789 (Best: 27.792 @epoch 60)
+Forward: 4102.58s
+
+Saving...
+Total: 4103.58s
+
+[Epoch 62]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8878]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.782 (Best: 27.792 @epoch 60)
+Forward: 4101.53s
+
+Saving...
+Total: 4102.53s
+
+[Epoch 63]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9343]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.778 (Best: 27.792 @epoch 60)
+Forward: 4102.11s
+
+Saving...
+Total: 4103.10s
+
+[Epoch 64]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9162]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.763 (Best: 27.792 @epoch 60)
+Forward: 4103.85s
+
+Saving...
+Total: 4104.85s
+
+[Epoch 65]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7936]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.785 (Best: 27.792 @epoch 60)
+Forward: 4102.99s
+
+Saving...
+Total: 4104.29s
+
+[Epoch 66]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8365]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.778 (Best: 27.792 @epoch 60)
+Forward: 4101.09s
+
+Saving...
+Total: 4102.19s
+
+[Epoch 67]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9842]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.788 (Best: 27.792 @epoch 60)
+Forward: 4102.04s
+
+Saving...
+Total: 4103.04s
+
+[Epoch 68]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8241]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.779 (Best: 27.792 @epoch 60)
+Forward: 4103.18s
+
+Saving...
+Total: 4104.19s
+
+[Epoch 69]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8430]	280.6+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.786 (Best: 27.792 @epoch 60)
+Forward: 4101.70s
+
+Saving...
+Total: 4102.70s
+
+[Epoch 70]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9040]	280.7+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.788 (Best: 27.792 @epoch 60)
+Forward: 4102.45s
+
+Saving...
+Total: 4103.64s
+
+[Epoch 71]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9254]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.798 (Best: 27.798 @epoch 71)
+Forward: 4103.05s
+
+Saving...
+Total: 4104.29s
+
+[Epoch 72]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9019]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.771 (Best: 27.798 @epoch 71)
+Forward: 4101.31s
+
+Saving...
+Total: 4102.32s
+
+[Epoch 73]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8804]	280.7+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.796 (Best: 27.798 @epoch 71)
+Forward: 4102.54s
+
+Saving...
+Total: 4103.60s
+
+[Epoch 74]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9988]	280.5+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.785 (Best: 27.798 @epoch 71)
+Forward: 4102.21s
+
+Saving...
+Total: 4103.24s
+
+[Epoch 75]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9667]	280.7+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.802 (Best: 27.802 @epoch 75)
+Forward: 4102.33s
+
+Saving...
+Total: 4103.74s
+
+[Epoch 76]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9150]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.785 (Best: 27.802 @epoch 75)
+Forward: 4102.25s
+
+Saving...
+Total: 4103.26s
+
+[Epoch 77]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8805]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.802 (Best: 27.802 @epoch 77)
+Forward: 4102.04s
+
+Saving...
+Total: 4103.30s
+
+[Epoch 78]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9891]	280.6+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.800 (Best: 27.802 @epoch 77)
+Forward: 4102.93s
+
+Saving...
+Total: 4103.96s
+
+[Epoch 79]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9586]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.785 (Best: 27.802 @epoch 77)
+Forward: 4103.93s
+
+Saving...
+Total: 4104.95s
+
+[Epoch 80]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9212]	280.9+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.796 (Best: 27.802 @epoch 77)
+Forward: 4103.30s
+
+Saving...
+Total: 4104.49s
+
+[Epoch 81]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8701]	281.0+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.791 (Best: 27.802 @epoch 77)
+Forward: 4102.78s
+
+Saving...
+Total: 4103.87s
+
+[Epoch 82]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9491]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.804 (Best: 27.804 @epoch 82)
+Forward: 4102.67s
+
+Saving...
+Total: 4103.96s
+
+[Epoch 83]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9122]	281.0+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.790 (Best: 27.804 @epoch 82)
+Forward: 4100.91s
+
+Saving...
+Total: 4101.91s
+
+[Epoch 84]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9045]	280.8+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.800 (Best: 27.804 @epoch 82)
+Forward: 4103.26s
+
+Saving...
+Total: 4104.37s
+
+[Epoch 85]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9563]	280.9+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.789 (Best: 27.804 @epoch 82)
+Forward: 4102.32s
+
+Saving...
+Total: 4103.55s
+
+[Epoch 86]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0194]	281.9+322.0s
+
+Evaluation:
+[Custom x4]	PSNR: 27.793 (Best: 27.804 @epoch 82)
+Forward: 4103.66s
+
+Saving...
+Total: 4104.65s
+
+[Epoch 87]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8707]	281.9+322.0s
+
+Evaluation:
+[Custom x4]	PSNR: 27.793 (Best: 27.804 @epoch 82)
+Forward: 4104.30s
+
+Saving...
+Total: 4105.27s
+
+[Epoch 88]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7724]	282.2+322.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.779 (Best: 27.804 @epoch 82)
+Forward: 4106.63s
+
+Saving...
+Total: 4107.60s
+
+[Epoch 89]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8280]	282.0+322.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.796 (Best: 27.804 @epoch 82)
+Forward: 4104.59s
+
+Saving...
+Total: 4105.56s
+
+[Epoch 90]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9745]	282.1+322.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.806 @epoch 90)
+Forward: 4103.60s
+
+Saving...
+Total: 4105.02s
+
+[Epoch 91]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9638]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.801 (Best: 27.806 @epoch 90)
+Forward: 4103.92s
+
+Saving...
+Total: 4104.90s
+
+[Epoch 92]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9240]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.806 @epoch 90)
+Forward: 4103.35s
+
+Saving...
+Total: 4104.38s
+
+[Epoch 93]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9418]	280.8+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.730 (Best: 27.806 @epoch 90)
+Forward: 4102.74s
+
+Saving...
+Total: 4103.75s
+
+[Epoch 94]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9668]	280.8+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.785 (Best: 27.806 @epoch 90)
+Forward: 4103.42s
+
+Saving...
+Total: 4104.39s
+
+[Epoch 95]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7743]	280.9+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.806 @epoch 90)
+Forward: 4103.24s
+
+Saving...
+Total: 4104.38s
+
+[Epoch 96]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9487]	281.0+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.805 (Best: 27.806 @epoch 90)
+Forward: 4102.66s
+
+Saving...
+Total: 4103.65s
+
+[Epoch 97]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8950]	280.9+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.793 (Best: 27.806 @epoch 90)
+Forward: 4102.18s
+
+Saving...
+Total: 4103.17s
+
+[Epoch 98]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8952]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.789 (Best: 27.806 @epoch 90)
+Forward: 4103.03s
+
+Saving...
+Total: 4104.02s
+
+[Epoch 99]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8685]	280.8+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.797 (Best: 27.806 @epoch 90)
+Forward: 4104.12s
+
+Saving...
+Total: 4105.11s
+
+[Epoch 100]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9246]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.798 (Best: 27.806 @epoch 90)
+Forward: 4104.19s
+
+Saving...
+Total: 4105.37s
+
+[Epoch 101]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9199]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.800 (Best: 27.806 @epoch 90)
+Forward: 4102.69s
+
+Saving...
+Total: 4103.68s
+
+[Epoch 102]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9063]	280.8+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.810 (Best: 27.810 @epoch 102)
+Forward: 4102.82s
+
+Saving...
+Total: 4104.06s
+
+[Epoch 103]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9412]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.818 (Best: 27.818 @epoch 103)
+Forward: 4103.14s
+
+Saving...
+Total: 4104.42s
+
+[Epoch 104]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0027]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.813 (Best: 27.818 @epoch 103)
+Forward: 4103.92s
+
+Saving...
+Total: 4104.93s
+
+[Epoch 105]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8758]	280.6+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.795 (Best: 27.818 @epoch 103)
+Forward: 4101.75s
+
+Saving...
+Total: 4103.08s
+
+[Epoch 106]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8063]	280.8+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.777 (Best: 27.818 @epoch 103)
+Forward: 4102.03s
+
+Saving...
+Total: 4103.02s
+
+[Epoch 107]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8030]	280.9+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.811 (Best: 27.818 @epoch 103)
+Forward: 4102.09s
+
+Saving...
+Total: 4103.09s
+
+[Epoch 108]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8284]	280.6+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.790 (Best: 27.818 @epoch 103)
+Forward: 4101.41s
+
+Saving...
+Total: 4102.41s
+
+[Epoch 109]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9891]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.818 @epoch 103)
+Forward: 4101.32s
+
+Saving...
+Total: 4102.32s
+
+[Epoch 110]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9281]	280.7+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.818 @epoch 103)
+Forward: 4102.29s
+
+Saving...
+Total: 4103.47s
+
+[Epoch 111]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8713]	281.1+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.805 (Best: 27.818 @epoch 103)
+Forward: 4102.52s
+
+Saving...
+Total: 4103.53s
+
+[Epoch 112]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8999]	280.6+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.817 (Best: 27.818 @epoch 103)
+Forward: 4102.71s
+
+Saving...
+Total: 4103.76s
+
+[Epoch 113]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9149]	280.7+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.811 (Best: 27.818 @epoch 103)
+Forward: 4102.36s
+
+Saving...
+Total: 4103.43s
+
+[Epoch 114]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9215]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.810 (Best: 27.818 @epoch 103)
+Forward: 4101.60s
+
+Saving...
+Total: 4102.68s
+
+[Epoch 115]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8717]	280.9+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.816 (Best: 27.818 @epoch 103)
+Forward: 4101.70s
+
+Saving...
+Total: 4103.00s
+
+[Epoch 116]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7870]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.824 (Best: 27.824 @epoch 116)
+Forward: 4101.25s
+
+Saving...
+Total: 4102.50s
+
+[Epoch 117]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8303]	280.9+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.812 (Best: 27.824 @epoch 116)
+Forward: 4100.91s
+
+Saving...
+Total: 4101.92s
+
+[Epoch 118]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9039]	280.9+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.804 (Best: 27.824 @epoch 116)
+Forward: 4100.92s
+
+Saving...
+Total: 4101.92s
+
+[Epoch 119]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9200]	280.9+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.824 @epoch 116)
+Forward: 4100.99s
+
+Saving...
+Total: 4101.99s
+
+[Epoch 120]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8283]	280.8+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.764 (Best: 27.824 @epoch 116)
+Forward: 4100.39s
+
+Saving...
+Total: 4101.59s
+
+[Epoch 121]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8348]	280.9+321.1s
+
+Evaluation:
+[Custom x4]	PSNR: 27.818 (Best: 27.824 @epoch 116)
+Forward: 4100.90s
+
+Saving...
+Total: 4101.90s
+
+[Epoch 122]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9412]	280.6+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.824 @epoch 116)
+Forward: 4102.57s
+
+Saving...
+Total: 4103.57s
+
+[Epoch 123]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0468]	280.9+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.820 (Best: 27.824 @epoch 116)
+Forward: 4103.52s
+
+Saving...
+Total: 4104.59s
+
+[Epoch 124]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8565]	280.9+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.787 (Best: 27.824 @epoch 116)
+Forward: 4101.67s
+
+Saving...
+Total: 4102.77s
+
+[Epoch 125]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9607]	280.8+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.824 (Best: 27.824 @epoch 125)
+Forward: 4101.89s
+
+Saving...
+Total: 4103.30s
+
+[Epoch 126]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7988]	281.1+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.821 (Best: 27.824 @epoch 125)
+Forward: 4115.30s
+
+Saving...
+Total: 4116.28s
+
+[Epoch 127]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8598]	281.1+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.810 (Best: 27.824 @epoch 125)
+Forward: 4107.86s
+
+Saving...
+Total: 4108.84s
+
+[Epoch 128]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8406]	281.3+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.805 (Best: 27.824 @epoch 125)
+Forward: 4107.27s
+
+Saving...
+Total: 4108.24s
+
+[Epoch 129]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9059]	281.2+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.792 (Best: 27.824 @epoch 125)
+Forward: 4105.99s
+
+Saving...
+Total: 4106.97s
+
+[Epoch 130]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9362]	281.0+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.790 (Best: 27.824 @epoch 125)
+Forward: 4105.80s
+
+Saving...
+Total: 4106.95s
+
+[Epoch 131]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8384]	281.1+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.818 (Best: 27.824 @epoch 125)
+Forward: 4106.19s
+
+Saving...
+Total: 4107.21s
+
+[Epoch 132]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9775]	281.2+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.791 (Best: 27.824 @epoch 125)
+Forward: 4106.06s
+
+Saving...
+Total: 4107.13s
+
+[Epoch 133]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9533]	280.9+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.814 (Best: 27.824 @epoch 125)
+Forward: 4106.28s
+
+Saving...
+Total: 4108.25s
+
+[Epoch 134]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8711]	280.9+321.2s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.824 @epoch 125)
+Forward: 4106.34s
+
+Saving...
+Total: 4107.35s
+
+[Epoch 135]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9922]	281.1+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.815 (Best: 27.824 @epoch 125)
+Forward: 4107.31s
+
+Saving...
+Total: 4108.51s
+
+[Epoch 136]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9554]	281.1+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.819 (Best: 27.824 @epoch 125)
+Forward: 4106.81s
+
+Saving...
+Total: 4107.83s
+
+[Epoch 137]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8783]	281.2+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.807 (Best: 27.824 @epoch 125)
+Forward: 4107.00s
+
+Saving...
+Total: 4108.00s
+
+[Epoch 138]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8802]	281.2+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.825 (Best: 27.825 @epoch 138)
+Forward: 4107.66s
+
+Saving...
+Total: 4108.91s
+
+[Epoch 139]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8678]	281.2+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.821 (Best: 27.825 @epoch 138)
+Forward: 4107.17s
+
+Saving...
+Total: 4108.18s
+
+[Epoch 140]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9127]	281.1+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.788 (Best: 27.825 @epoch 138)
+Forward: 4106.18s
+
+Saving...
+Total: 4107.42s
+
+[Epoch 141]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0564]	281.0+321.3s
+
+Evaluation:
+[Custom x4]	PSNR: 27.820 (Best: 27.825 @epoch 138)
+Forward: 4106.33s
+
+Saving...
+Total: 4107.34s
+
+[Epoch 142]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9105]	281.0+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.833 (Best: 27.833 @epoch 142)
+Forward: 4106.46s
+
+Saving...
+Total: 4107.91s
+
+[Epoch 143]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9008]	281.1+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.830 (Best: 27.833 @epoch 142)
+Forward: 4106.26s
+
+Saving...
+Total: 4107.29s
+
+[Epoch 144]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8437]	281.0+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.806 (Best: 27.833 @epoch 142)
+Forward: 4105.51s
+
+Saving...
+Total: 4106.55s
+
+[Epoch 145]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9060]	281.1+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.821 (Best: 27.833 @epoch 142)
+Forward: 4106.53s
+
+Saving...
+Total: 4107.73s
+
+[Epoch 146]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7549]	281.0+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.813 (Best: 27.833 @epoch 142)
+Forward: 4106.98s
+
+Saving...
+Total: 4108.02s
+
+[Epoch 147]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9749]	281.1+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.822 (Best: 27.833 @epoch 142)
+Forward: 4108.66s
+
+Saving...
+Total: 4109.67s
+
+[Epoch 148]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9096]	281.2+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.823 (Best: 27.833 @epoch 142)
+Forward: 4108.35s
+
+Saving...
+Total: 4109.39s
+
+[Epoch 149]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8329]	281.1+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.777 (Best: 27.833 @epoch 142)
+Forward: 4108.23s
+
+Saving...
+Total: 4109.25s
+
+[Epoch 150]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8953]	281.0+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.821 (Best: 27.833 @epoch 142)
+Forward: 4108.33s
+
+Saving...
+Total: 4109.56s
+
+[Epoch 151]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8947]	281.3+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.816 (Best: 27.833 @epoch 142)
+Forward: 4110.24s
+
+Saving...
+Total: 4111.28s
+
+[Epoch 152]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9724]	281.2+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.814 (Best: 27.833 @epoch 142)
+Forward: 4108.20s
+
+Saving...
+Total: 4109.38s
+
+[Epoch 153]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9292]	281.2+321.4s
+
+Evaluation:
+[Custom x4]	PSNR: 27.813 (Best: 27.833 @epoch 142)
+Forward: 4108.61s
+
+Saving...
+Total: 4109.66s
+
+[Epoch 154]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8921]	281.0+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.809 (Best: 27.833 @epoch 142)
+Forward: 4108.53s
+
+Saving...
+Total: 4109.55s
+
+[Epoch 155]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9844]	281.1+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.809 (Best: 27.833 @epoch 142)
+Forward: 4108.97s
+
+Saving...
+Total: 4110.18s
+
+[Epoch 156]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9426]	281.0+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.785 (Best: 27.833 @epoch 142)
+Forward: 4110.52s
+
+Saving...
+Total: 4111.57s
+
+[Epoch 157]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8067]	281.1+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.815 (Best: 27.833 @epoch 142)
+Forward: 4111.05s
+
+Saving...
+Total: 4112.08s
+
+[Epoch 158]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8365]	281.1+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.820 (Best: 27.833 @epoch 142)
+Forward: 4114.40s
+
+Saving...
+Total: 4115.45s
+
+[Epoch 159]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7995]	281.1+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.822 (Best: 27.833 @epoch 142)
+Forward: 4115.69s
+
+Saving...
+Total: 4116.73s
+
+[Epoch 160]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8480]	281.2+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.786 (Best: 27.833 @epoch 142)
+Forward: 4114.85s
+
+Saving...
+Total: 4116.17s
+
+[Epoch 161]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8015]	281.1+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.815 (Best: 27.833 @epoch 142)
+Forward: 4116.04s
+
+Saving...
+Total: 4117.06s
+
+[Epoch 162]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7943]	281.1+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.811 (Best: 27.833 @epoch 142)
+Forward: 4116.29s
+
+Saving...
+Total: 4117.36s
+
+[Epoch 163]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8464]	281.0+321.8s
+
+Evaluation:
+[Custom x4]	PSNR: 27.827 (Best: 27.833 @epoch 142)
+Forward: 4116.79s
+
+Saving...
+Total: 4117.80s
+
+[Epoch 164]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8605]	281.0+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.824 (Best: 27.833 @epoch 142)
+Forward: 4118.27s
+
+Saving...
+Total: 4119.33s
+
+[Epoch 165]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9229]	281.1+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.834 (Best: 27.834 @epoch 165)
+Forward: 4118.50s
+
+Saving...
+Total: 4119.93s
+
+[Epoch 166]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8782]	281.3+321.8s
+
+Evaluation:
+[Custom x4]	PSNR: 27.819 (Best: 27.834 @epoch 165)
+Forward: 4119.10s
+
+Saving...
+Total: 4120.15s
+
+[Epoch 167]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8896]	281.1+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.805 (Best: 27.834 @epoch 165)
+Forward: 4116.65s
+
+Saving...
+Total: 4117.63s
+
+[Epoch 168]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9120]	281.2+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.812 (Best: 27.834 @epoch 165)
+Forward: 4115.96s
+
+Saving...
+Total: 4116.96s
+
+[Epoch 169]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8732]	281.0+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.769 (Best: 27.834 @epoch 165)
+Forward: 4114.64s
+
+Saving...
+Total: 4115.63s
+
+[Epoch 170]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8577]	281.0+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.826 (Best: 27.834 @epoch 165)
+Forward: 4115.23s
+
+Saving...
+Total: 4116.41s
+
+[Epoch 171]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8932]	281.0+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.813 (Best: 27.834 @epoch 165)
+Forward: 4115.94s
+
+Saving...
+Total: 4116.93s
+
+[Epoch 172]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8616]	281.0+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.824 (Best: 27.834 @epoch 165)
+Forward: 4116.59s
+
+Saving...
+Total: 4117.59s
+
+[Epoch 173]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8007]	281.2+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.818 (Best: 27.834 @epoch 165)
+Forward: 4116.70s
+
+Saving...
+Total: 4117.73s
+
+[Epoch 174]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8949]	280.9+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.826 (Best: 27.834 @epoch 165)
+Forward: 4115.09s
+
+Saving...
+Total: 4116.11s
+
+[Epoch 175]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8557]	280.8+321.8s
+
+Evaluation:
+[Custom x4]	PSNR: 27.822 (Best: 27.834 @epoch 165)
+Forward: 4115.02s
+
+Saving...
+Total: 4116.26s
+
+[Epoch 176]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9750]	280.9+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.814 (Best: 27.834 @epoch 165)
+Forward: 4114.17s
+
+Saving...
+Total: 4115.31s
+
+[Epoch 177]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9392]	280.9+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.808 (Best: 27.834 @epoch 165)
+Forward: 4113.60s
+
+Saving...
+Total: 4114.60s
+
+[Epoch 178]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9064]	280.9+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.825 (Best: 27.834 @epoch 165)
+Forward: 4113.78s
+
+Saving...
+Total: 4114.77s
+
+[Epoch 179]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9110]	281.1+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.823 (Best: 27.834 @epoch 165)
+Forward: 4113.78s
+
+Saving...
+Total: 4115.87s
+
+[Epoch 180]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8797]	280.8+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.837 (Best: 27.837 @epoch 180)
+Forward: 4113.61s
+
+Saving...
+Total: 4115.01s
+
+[Epoch 181]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 7.0355]	280.8+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.820 (Best: 27.837 @epoch 180)
+Forward: 4113.80s
+
+Saving...
+Total: 4114.83s
+
+[Epoch 182]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8535]	281.0+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.814 (Best: 27.837 @epoch 180)
+Forward: 4113.37s
+
+Saving...
+Total: 4114.38s
+
+[Epoch 183]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8491]	281.0+321.5s
+
+Evaluation:
+[Custom x4]	PSNR: 27.839 (Best: 27.839 @epoch 183)
+Forward: 4113.97s
+
+Saving...
+Total: 4115.40s
+
+[Epoch 184]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8883]	281.2+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.829 (Best: 27.839 @epoch 183)
+Forward: 4114.82s
+
+Saving...
+Total: 4115.82s
+
+[Epoch 185]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8949]	281.0+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.838 (Best: 27.839 @epoch 183)
+Forward: 4114.25s
+
+Saving...
+Total: 4115.46s
+
+[Epoch 186]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8769]	281.0+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.830 (Best: 27.839 @epoch 183)
+Forward: 4113.88s
+
+Saving...
+Total: 4114.90s
+
+[Epoch 187]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8370]	280.9+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.836 (Best: 27.839 @epoch 183)
+Forward: 4116.23s
+
+Saving...
+Total: 4117.25s
+
+[Epoch 188]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8741]	281.1+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.832 (Best: 27.839 @epoch 183)
+Forward: 4115.11s
+
+Saving...
+Total: 4116.13s
+
+[Epoch 189]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.7969]	280.8+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.837 (Best: 27.839 @epoch 183)
+Forward: 4114.09s
+
+Saving...
+Total: 4115.11s
+
+[Epoch 190]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8319]	280.9+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.833 (Best: 27.839 @epoch 183)
+Forward: 4114.04s
+
+Saving...
+Total: 4115.24s
+
+[Epoch 191]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8130]	281.0+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.833 (Best: 27.839 @epoch 183)
+Forward: 4113.78s
+
+Saving...
+Total: 4114.93s
+
+[Epoch 192]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8271]	280.9+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.814 (Best: 27.839 @epoch 183)
+Forward: 4113.99s
+
+Saving...
+Total: 4115.02s
+
+[Epoch 193]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8826]	280.8+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.827 (Best: 27.839 @epoch 183)
+Forward: 4115.04s
+
+Saving...
+Total: 4116.11s
+
+[Epoch 194]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8744]	281.0+321.8s
+
+Evaluation:
+[Custom x4]	PSNR: 27.834 (Best: 27.839 @epoch 183)
+Forward: 4115.20s
+
+Saving...
+Total: 4116.23s
+
+[Epoch 195]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8214]	281.0+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.839 (Best: 27.839 @epoch 183)
+Forward: 4115.02s
+
+Saving...
+Total: 4116.24s
+
+[Epoch 196]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8806]	280.9+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.839 (Best: 27.839 @epoch 196)
+Forward: 4114.48s
+
+Saving...
+Total: 4115.76s
+
+[Epoch 197]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8520]	281.0+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.815 (Best: 27.839 @epoch 196)
+Forward: 4113.71s
+
+Saving...
+Total: 4114.74s
+
+[Epoch 198]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9716]	281.0+321.6s
+
+Evaluation:
+[Custom x4]	PSNR: 27.836 (Best: 27.839 @epoch 196)
+Forward: 4114.76s
+
+Saving...
+Total: 4115.91s
+
+[Epoch 199]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.9349]	280.9+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.845 (Best: 27.845 @epoch 199)
+Forward: 4115.02s
+
+Saving...
+Total: 4116.29s
+
+[Epoch 200]	Learning rate: 1.00e-4
+[1600/2400]	[L1: 6.8994]	281.0+321.7s
+
+Evaluation:
+[Custom x4]	PSNR: 27.831 (Best: 27.845 @epoch 199)
+Forward: 4114.87s
+
+Saving...
+Total: 4116.09s
+
