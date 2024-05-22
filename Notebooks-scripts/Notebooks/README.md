@@ -45,7 +45,7 @@ Explains in a single Notebook how to set up the original EDSR-PyTorch repository
 
 Explains how to select a crop of a High-Resolution (HR) image in SVS format, downscale it by a factor 4, and then upscale it with a Bicubic algorithm and 2 different trained EDSR x4 models, and comparing the upscaled version with the original HR crop, like this image:
 
-![](../../Figures/pretrained_vs_trained.png)
+<img src="../../Figures/pretrained_vs_trained.png" width="600">
 
 The user must provide all corresponding files and parameters in order to do so. For more information, check the Notebook.
 
@@ -56,20 +56,19 @@ Explains how to make Histograms and Boxplots to display our measured data (in .c
 
 1. Histogram from a single set of measurements
 <img src="../../Figures/histogram_pathomics_pretrained_PSNR.png" width="600">
-![](../../Figures/histogram_pathomics_pretrained_PSNR.png)
 
 2. Compare histograms
-![](../../Figures/histogram_comparison_pathomics_new_PSNR.png)
+<img src="../../Figures/histogram_comparison_pathomics_new_PSNR.png" width="600">
 
 3. Making box plots to compare data
-![](../../Figures/boxplots_comparison_pathomics_new_PSNR.png)
+<img src="../../Figures/boxplots_comparison_pathomics_new_PSNR.png" width="600">
 
 4. Making figures from Segmentation measures
 4.1 Histograms
-![](../../Figures/histogram_pathomics_segmentation_pretrained_mean_matched_score.png)
+<img src="../../Figures/histogram_pathomics_segmentation_pretrained_mean_matched_score.png" width="600">
 
 4.2 Boxplots
-![](../../Figures/boxplots_comparison_pathomics_final_mean_matched_score.png)
+<img src="../../Figures/boxplots_comparison_pathomics_final_mean_matched_score.png" width="600">
 
 
 ## Reading_log_files
