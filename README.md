@@ -11,7 +11,12 @@ For more detailed information about this model, please refer to its original aut
 ## Our work
 We focused on the single 4-times scale of the EDSR model on pathological images. We trained the EDSR x4 model using 2 different datasets, each composed of High-Resolution (HR) images and their corresponding Low-Resolution (LR) downscalings (by a factor 4), studied the performance in terms of the image quality between the Super-Resolution (SR) upscalings of the LR images compared to the HR versions, and applied our last trained model to synthetic generated pathological images.
 
-In our work we also made some modifications to the original code, added two new files ([freeze.py](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/EDSR-PyTorch/src/freeze.py) and [main_use.py](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/EDSR-PyTorch/src/main_use.py)) and a new argument (save_models_each). These modifications were meant to fit our work, and are in no means improvements or replacements of any kind to the original work made by the authors of the model. We also produced a sort of Documentation of our understanding of the PyTorch Implementation of the EDSR x4 model, as well as the pertinent explanations of our contributions.
+In our work, we also:
+
+* made some modifications to the original code, by adding two new files ([freeze.py](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/EDSR-PyTorch/src/freeze.py) and [main_use.py](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/EDSR-PyTorch/src/main_use.py)), and a new argument (save_models_each);
+* produced a sort of Documentation of our understanding of the PyTorch Implementation of the EDSR x4 model, also including pertinent explanations of our contributions.
+
+These contributions were meant to facilitate our work, and are in no means improvements or replacements of any kind to the original work made by the authors of the model. 
 
 
 ## The content of this repository
