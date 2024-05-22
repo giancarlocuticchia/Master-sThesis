@@ -68,11 +68,11 @@ Explains how to make Histograms and Boxplots to display our measured data (in .c
 
 4. Making figures from Segmentation measures
 
-    4.1 Histograms
+* 4.1 Histograms
 
 <img src="../../Figures/histogram_pathomics_segmentation_pretrained_mean_matched_score.png" width="600">
 
-    4.2 Boxplots
+* 4.2 Boxplots
 
 <img src="../../Figures/boxplots_comparison_pathomics_final_mean_matched_score.png" width="600">
 
