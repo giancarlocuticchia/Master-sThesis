@@ -55,19 +55,25 @@ The user must provide all corresponding files and parameters in order to do so. 
 Explains how to make Histograms and Boxplots to display our measured data (in .csv format) produced by our scripts. We can see examples of .csv files in the [Example-files/Measures](../../Example-files/Measures) folder of our repository. Examples of figures outputs are:
 
 1. Histogram from a single set of measurements
+
 <img src="../../Figures/histogram_pathomics_pretrained_PSNR.png" width="600">
 
 2. Compare histograms
+
 <img src="../../Figures/histogram_comparison_pathomics_new_PSNR.png" width="600">
 
 3. Making box plots to compare data
+
 <img src="../../Figures/boxplots_comparison_pathomics_new_PSNR.png" width="600">
 
 4. Making figures from Segmentation measures
-4.1 Histograms
+
+    4.1 Histograms
+
 <img src="../../Figures/histogram_pathomics_segmentation_pretrained_mean_matched_score.png" width="600">
 
-4.2 Boxplots
+    4.2 Boxplots
+
 <img src="../../Figures/boxplots_comparison_pathomics_final_mean_matched_score.png" width="600">
 
 
