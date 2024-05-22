@@ -118,4 +118,4 @@ Information about the other variables were explained above when talking about th
 
 An example of a composition made by this script would be:
 
-<img src="../../Figures/composition_synthetic_images_with_segmentation.png" height="600">
+<img src="../../Figures/composition_LR_images_with_segmentation.png" height="600">
