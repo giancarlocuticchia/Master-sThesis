@@ -26,14 +26,14 @@ Explains how we prepared both of our datasets: where we took the images from and
 
 ## 2_Freezing_layers
 
-Explains how to disable gradients on layers of the model to prevent them from being updated during training, if desired. It also explains how to set and use our module [freeze.py](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/EDSR-PyTorch/src/freeze.py), as well as how to add its pertinent arguments to the main.py script, in order to be able to "freeze" (disable gradients) on desired layers during training.
+Explains how to disable gradients on layers of the model to prevent them from being updated during training, if desired. It also explains how to set and use our module [freeze.py](../../EDSR-PyTorch/src/freeze.py), as well as how to add its pertinent arguments to the main.py script, in order to be able to "freeze" (disable gradients) on desired layers during training.
 
 
 ## 3_Other_modifications
 
 Explains how to set up the new argument we produced "save_models_each". This argument allows the user to control how many state dictionaries of trained models are stored in disk while passing the "save" argument to the main.py script, instead of saving them for each epoch.
 
-It also mentions our [main_use.py](https://github.com/giancarlocuticchia/Master-sThesis/blob/main/EDSR-PyTorch/src/main_use.py) script and how to use it. This script is what we consider a minimal version of the original main.py script made by its authors.
+It also mentions our [main_use.py](../../EDSR-PyTorch/src/main_use.py) script and how to use it. This script is what we consider a minimal version of the original main.py script made by its authors.
 
 
 ## 4_Training_and_Testing
@@ -45,32 +45,32 @@ Explains in a single Notebook how to set up the original EDSR-PyTorch repository
 
 Explains how to select a crop of a High-Resolution (HR) image in SVS format, downscale it by a factor 4, and then upscale it with a Bicubic algorithm and 2 different trained EDSR x4 models, and comparing the upscaled version with the original HR crop, like this image:
 
-![](/../../Figures/pretrained_vs_trained.png)
+![](../../Figures/pretrained_vs_trained.png)
 
 The user must provide all corresponding files and parameters in order to do so. For more information, check the Notebook.
 
 
 ## Histograms_and_Boxplots
 
-Explains how to make Histograms and Boxplots to display our measured data (in .csv format) produced by our scripts. We can see examples of .csv files in the [Example-files/Measures](https://github.com/giancarlocuticchia/Master-sThesis/tree/main/Example-files/Measures) folder of our repository. Examples of figures outputs are:
+Explains how to make Histograms and Boxplots to display our measured data (in .csv format) produced by our scripts. We can see examples of .csv files in the [Example-files/Measures](../../Example-files/Measures) folder of our repository. Examples of figures outputs are:
 
 1. Histogram from a single set of measurements
-![](/../../Figures/histogram_pathomics_pretrained_PSNR.png)
+![](../../Figures/histogram_pathomics_pretrained_PSNR.png)
 
 2. Compare histograms
-![](/../../Figures/histogram_comparison_pathomics_new_PSNR.png)
+![](../../Figures/histogram_comparison_pathomics_new_PSNR.png)
 
 3. Making box plots to compare data
-![](/../../Figures/boxplots_comparison_pathomics_new_PSNR.png)
+![](../../Figures/boxplots_comparison_pathomics_new_PSNR.png)
 
 4. Making figures from Segmentation measures
 4.1 Histograms
-![](/../../Figures/histogram_pathomics_segmentation_pretrained_mean_matched_score.png)
+![](../../Figures/histogram_pathomics_segmentation_pretrained_mean_matched_score.png)
 
 4.2 Boxplots
-![](/../../Figures/boxplots_comparison_pathomics_final_mean_matched_score.png)
+![](../../Figures/boxplots_comparison_pathomics_final_mean_matched_score.png)
 
 
 ## Reading_log_files
 
-Explains how to read log.txt files produced by the training of the EDSR x4 model into a dataframe. In particular, it's helpful to merge in a single training curve (average PSNR vs Epochs) the training values (average PSNR per epoch) from several log files corresponding to a training that was performed in several sessions (and hence, several log.txt files). Examples of log files can be found in in the [Example-files/Logs](https://github.com/giancarlocuticchia/Master-sThesis/tree/main/Example-files/Logs) folder of our repository.
+Explains how to read log.txt files produced by the training of the EDSR x4 model into a dataframe. In particular, it's helpful to merge in a single training curve (average PSNR vs Epochs) the training values (average PSNR per epoch) from several log files corresponding to a training that was performed in several sessions (and hence, several log.txt files). Examples of log files can be found in in the [Example-files/Logs](../../Example-files/Logs) folder of our repository.
